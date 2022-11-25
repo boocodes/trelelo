@@ -2,7 +2,8 @@ import { createSlice , PayloadAction} from "@reduxjs/toolkit";
 import { ColumnType } from "../../../types";
 
 interface Columns{
-    columns: ColumnType[]
+    columns: ColumnType[],
+    activeColumnId: string;
 }
 
 const initialState:Columns = {
@@ -11,7 +12,8 @@ const initialState:Columns = {
         {id: Math.random().toString(), name : 'In Progress'},
         {id: Math.random().toString(), name : 'Testing'}, 
         {id: Math.random().toString(), name : 'Done'},
-    ]
+    ],
+    activeColumnId: "",
 }
 
 interface ChangeColumnType{
@@ -31,8 +33,8 @@ export const columnReducer = createSlice({
         },
         changeColumn: (state, {payload}: PayloadAction<ChangeColumnType>) =>{
            state.columns = state.columns.map((column:ColumnType) => column.id === payload.columnId ? {...column, ...payload} : column);
-            
         },
+        
     }
 })
 
