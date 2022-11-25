@@ -1,3 +1,3 @@
 export {default} from './reducer';
-export {addUserName} from './reducer'
-export {userNameSelector, userAuthFlagSelector} from './selector';
+export {addUserName, changeUserEmail, authUser} from './reducer'
+export {userNameSelector, userAuthFlagSelector, userEmailSelector} from './selector';

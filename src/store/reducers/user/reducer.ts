@@ -16,6 +16,10 @@ interface LoginUser{
     userName: string;
 }
 
+interface ChangeUserEmailInterface{
+    email: string;
+}
+
 export const userReducer = createSlice({
     name: 'user',
     initialState,
@@ -26,10 +30,13 @@ export const userReducer = createSlice({
         authUser: (state, {payload}:PayloadAction<AuthUserInterface>) =>{
             return {...state, ...payload};
         },
+        changeUserEmail: (state, {payload}:PayloadAction<ChangeUserEmailInterface>) =>{
+            return {...state, ...payload};
+        },
     }
 })
 
 
 
-export const {addUserName, authUser}  = userReducer.actions;
+export const {addUserName, authUser, changeUserEmail}  = userReducer.actions;
 export default userReducer.reducer;
