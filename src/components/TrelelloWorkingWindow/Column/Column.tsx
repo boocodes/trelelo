@@ -12,6 +12,7 @@ import {
     CardType,
     Xicon,
     CustomLink,
+    changeActiveColumnId,
 }   from '../../../';
 
 
@@ -105,7 +106,7 @@ const Column = (props: columnProps) =>{
                 <TitleWrapper>
                 {editColumnTitleFlag === false ? 
                 <>
-                <ColumnTitle onClick={()=>{}}><CustomLink link="./column" text={props.title} bgColor="none" textColor="black"/></ColumnTitle>
+                <ColumnTitle onClick={()=>dispatch(changeActiveColumnId({activeColumnId:props.id}))}><CustomLink link="./column" text={props.title} bgColor="none" textColor="black"/></ColumnTitle>
                 <DeleteRowButton onClick={()=>{deleteColumn(props.title)}}><DeleteRowButtonImage src={Xicon}></DeleteRowButtonImage></DeleteRowButton>
                 </>
                 : 
