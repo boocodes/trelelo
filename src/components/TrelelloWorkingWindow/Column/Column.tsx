@@ -10,7 +10,8 @@ import {
     useAppDispatch,
     useAppSelector,
     CardType,
-    Xicon
+    Xicon,
+    CustomLink,
 }   from '../../../';
 
 
@@ -104,7 +105,7 @@ const Column = (props: columnProps) =>{
                 <TitleWrapper>
                 {editColumnTitleFlag === false ? 
                 <>
-                <ColumnTitle onClick={()=>{setEditColumnTitleFlag(true)}} >{props.title}</ColumnTitle>
+                <ColumnTitle onClick={()=>{}}><CustomLink link="./column" text={props.title} bgColor="none" textColor="black"/></ColumnTitle>
                 <DeleteRowButton onClick={()=>{deleteColumn(props.title)}}><DeleteRowButtonImage src={Xicon}></DeleteRowButtonImage></DeleteRowButton>
                 </>
                 : 

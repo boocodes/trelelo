@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import {
+    useAppSelector,
+    userEmailSelector,
+    userNameSelector,
+}   from '../../';
+
 
 interface Props{
 
@@ -6,15 +12,17 @@ interface Props{
 
 
 function UserInfoBlock(props:Props){
+    const userName = useAppSelector(userNameSelector);
+    const userEmail = useAppSelector(userEmailSelector);
     return(
         <UserDataExternalWrapper>
             <UserDataElementWrapper>
                 <UserDataCommonText>login:</UserDataCommonText>
-                <UserData>nick</UserData>
+                <UserData>{userName}</UserData>
             </UserDataElementWrapper>
             <UserDataElementWrapper>
                 <UserDataCommonText>email:</UserDataCommonText>
-                <UserData>java.2015@bk.ru</UserData>
+                <UserData>{userEmail}</UserData>
             </UserDataElementWrapper>
             <UserDataElementWrapper>
                 <UserDataCommonText>password:</UserDataCommonText>

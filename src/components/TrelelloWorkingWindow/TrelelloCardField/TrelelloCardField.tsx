@@ -98,6 +98,7 @@ const AddAnotherColumnWrapper = styled.div`
     padding: 5px 0px 5px 10px;
     width: 200px;
     background-color: #ebecf0;
+    border-radius: 5px;
 `
 const AddColumnButton = styled.button`
     background-color: #3d99ce;
@@ -132,7 +133,7 @@ const AddAnotherColumnWrapperInput = styled.input`
         }
     }
     outline: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 `
 const AddAnotherColumnWrapperAddButton = styled.button`
     background-color: #0079bf;
