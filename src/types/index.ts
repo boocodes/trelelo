@@ -19,4 +19,5 @@ export interface CommentType{
 export interface UserType{
     userName:string;
     authFlag: boolean;
+    email: string;
 }
