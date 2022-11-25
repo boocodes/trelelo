@@ -2,18 +2,20 @@
 import {useState} from "react";
 import styled from "styled-components";
 import {Form, Field} from 'react-final-form';
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { deleteCard,
-         changeCard, 
-         addComment, 
-         deleteComment, 
-         userNameSelector, 
-         selectDescriptionByCardId,
-         RootState,
-         selectCardById,
-         selectCommentsByCardId
-        } from "../../store";
-import {CommentType} from './../../types';
+import {
+    deleteCard,
+    changeCard,
+    addComment,
+    deleteComment,
+    userNameSelector,
+    RootState,
+    selectCardById,
+    selectCommentsByCardId,
+    CommentType,
+    useAppDispatch,
+    useAppSelector
+}   from '../../';
+
 
 
 interface CardModalWindowProps{

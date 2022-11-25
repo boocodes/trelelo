@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { useAppDispatch } from "../../hooks";
-import { Form, Field } from 'react-final-form';
-import {addUserName} from '../../store';
-import {Button, Input} from './../../ui'
-
+import {
+    useAppDispatch,
+    addUserName,
+    Button,
+    Input,
+} from '../../';
+import { Form,Field } from 'react-final-form';
 
 const AskingNameModalWindow = () =>{
     const dispatch = useAppDispatch();

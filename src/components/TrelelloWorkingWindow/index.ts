@@ -1,3 +1,3 @@
-export * from './Column/Column';
-export * from './TrelelloApp/TrelelloApp';
-export * from './TrelelloCardField/TrelelloCardField';
+export * from './Column';
+export * from './TrelelloApp';
+export * from './TrelelloCardField';

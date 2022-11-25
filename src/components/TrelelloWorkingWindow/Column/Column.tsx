@@ -1,14 +1,19 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { Field, Form } from "react-final-form";
-import { addCard,
-         deleteCurrentColumn, 
-         changeColumn,
-         selectCardsByColumnId,
-        } from "../../../store";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { CardType } from "../../../types";
-import Xicon from '../../../Images/X.png';
+
+import {
+    addCard,
+    deleteCurrentColumn,
+    changeColumn,
+    selectCardsByColumnId,
+    useAppDispatch,
+    useAppSelector,
+    CardType,
+    Xicon
+}   from '../../../';
+
+
 
 
 

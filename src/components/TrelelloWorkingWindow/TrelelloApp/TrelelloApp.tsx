@@ -1,10 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
-import TrelelloCardField from "../TrelelloCardField/TrelelloCardField";
-import CardModalWindow from "../../ModalWindows/CardModalWindow";
-import { useAppSelector } from "../../../hooks";
-import { userNameSelector } from "../../../store";
 
+
+
+import {
+    CardModalWindow,
+    useAppDispatch,
+    userNameSelector,
+    useAppSelector,
+    TrelelloCardField
+}   from '../../../';
 
 
 const TrelelloApp = () =>{

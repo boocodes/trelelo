@@ -1,11 +1,19 @@
 import styled from "styled-components";
 import { useState } from "react";
 import {Form, Field} from 'react-final-form';
-import { useAppSelector, useAppDispatch } from "../../../hooks";
-import { addNewColumn, columnsSelector, } from "../../../store";
-import Column from '../Column/Column';
-import Xicon from '../../../Images/X.png';
-import {ColumnType} from './../../../types';
+
+import {
+    useAppDispatch,
+    useAppSelector,
+    addNewColumn,
+    columnsSelector,
+    Column,
+    Xicon,
+    ColumnType
+}   from '../../../';
+
+
+
 
 interface Props{
     setCardModalWindowTitleFunction: (title:string)=> void;
