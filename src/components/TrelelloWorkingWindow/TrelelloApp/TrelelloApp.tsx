@@ -10,6 +10,7 @@ import {
     useAppSelector,
     TrelelloCardField,
     CustomLink,
+    Header,
 }   from '../../../';
 
 
@@ -47,14 +48,7 @@ const TrelelloApp = () =>{
                 modalWindowTitle={cardModalWindowTitle}
             />
             }
-            <MainHeader> 
-                <MainHeaderLogoText>
-                    <CustomLink text="Trelello" link={"/app"} bgColor={"none"}/>
-                </MainHeaderLogoText>
-                <UserNameInMainHeader>
-                    <CustomLink text={userName} link={"/personal"} bgColor={"#0a5480"}/>
-                </UserNameInMainHeader>
-            </MainHeader>
+            <Header/>
             <MainBody>
                 <TrelelloCardField
                 setCardModalWindowTitleFunction={setCardModalWindowTitle}
