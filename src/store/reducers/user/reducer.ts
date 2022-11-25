@@ -3,6 +3,16 @@ import {UserType} from '../../../types'
 
 const initialState:UserType = {
     userName: '',
+    authFlag: false,
+}
+
+
+interface AuthUserInterface{
+    authFlag: boolean;
+}
+
+interface LoginUser{
+    userName: string;
 }
 
 export const userReducer = createSlice({
@@ -10,12 +20,15 @@ export const userReducer = createSlice({
     initialState,
     reducers:{
         addUserName: (state, action: PayloadAction<string>) =>{
-            state.userName = action.payload
+            state.userName = action.payload;
+        },
+        authUser: (state, {payload}:PayloadAction<AuthUserInterface>) =>{
+            return {...state, ...payload};
         },
     }
 })
 
 
 
-export const {addUserName}  = userReducer.actions;
+export const {addUserName, authUser}  = userReducer.actions;
 export default userReducer.reducer;

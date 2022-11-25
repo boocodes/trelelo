@@ -8,12 +8,13 @@ import {Button, Input} from './../../ui'
 const AskingNameModalWindow = () =>{
     const dispatch = useAppDispatch();
     interface userNameInputValues{
-        userName:string;
+        login:string;
+        password: string;
     }
 
     const onSubmit = (values:userNameInputValues) => {
-        if(!values.userName?.trim()) return 
-        dispatch(addUserName(values.userName))
+        if(!values.login?.trim()) return 
+        dispatch(addUserName(values.login))
     }
 
     return(
@@ -26,13 +27,18 @@ const AskingNameModalWindow = () =>{
                         onSubmit={handleSubmit}
                     >  
                         <Wrapper>
-                            <Label>Your name in app</Label>
+                            <Label>Login</Label>
                             <Field
-                                name='userName'
-                                component={Input.default}
+                                name='login'
+                                component={Input}
+                            />
+                            <Label>Password</Label>
+                            <Field
+                                name='password'
+                                component={Input}
                             />   
-                            <Button.default text='submit'/>
-                            <Footnote>You will be called - <UserNameSpan>{values.userName} {values.userName === undefined ? null : '😎'}</UserNameSpan></Footnote>
+                            <Button text='submit'/>
+                            
                         </Wrapper>
                     </form>
                 )
@@ -49,6 +55,7 @@ const UserNameSpan = styled.span`
     font-weight: bold;
 `
 const WindowOverlay = styled.div`
+    
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -72,7 +79,7 @@ const PopUpWrapper = styled.div`
 `
 const BlackLayer = styled.div`
     background-color: #505765;
-    opacity: 0.6;
+    opacity: 1;
     position: fixed;
     width: 100%;
     height: 100%;

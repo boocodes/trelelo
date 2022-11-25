@@ -1,0 +1,1 @@
+export {default as CardModalWindow} from './CardModalWindow';
