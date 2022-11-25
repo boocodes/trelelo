@@ -158,6 +158,7 @@ const Wrapper = styled.div`
     border-radius: 3px;
     max-width: 210px;
     padding: 5px 15px 10px 15px;
+    margin-bottom: 30px;
 `
 const ColumnTitle = styled.p`
     color: #40516d;

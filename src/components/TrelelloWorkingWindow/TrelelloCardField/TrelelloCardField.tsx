@@ -86,10 +86,12 @@ const TrelelloCardField = (props:Props) =>{
 
 const Wrapper = styled.div`
     display: flex;
+    
     align-items: flex-start;
     margin-top: 10px;
     justify-content: flex-start;
-    margin-left: 3%;
+    margin-left: 50px;
+    flex-wrap: wrap;
     
 `
 const AddAnotherColumnWrapper = styled.div`

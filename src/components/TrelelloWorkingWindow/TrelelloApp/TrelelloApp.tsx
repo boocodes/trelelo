@@ -8,7 +8,8 @@ import {
     useAppDispatch,
     userNameSelector,
     useAppSelector,
-    TrelelloCardField
+    TrelelloCardField,
+    CustomLink,
 }   from '../../../';
 
 
@@ -48,10 +49,10 @@ const TrelelloApp = () =>{
             }
             <MainHeader> 
                 <MainHeaderLogoText>
-                    Trelello
+                    <CustomLink text="Trelello" link={"/app"} bgColor={"none"}/>
                 </MainHeaderLogoText>
                 <UserNameInMainHeader>
-                    {userName}
+                    <CustomLink text={userName} link={"/personal"} bgColor={"#0a5480"}/>
                 </UserNameInMainHeader>
             </MainHeader>
             <MainBody>
@@ -67,10 +68,9 @@ const TrelelloApp = () =>{
 }
 
 const MainHeader = styled.div`
-    height: 60px;
+    padding: 20px;
     display: flex;
-    width: 100%;
-    position: fixed;
+    align-items: center;
     justify-content: space-between;
     background-color: #004269;
 `
@@ -78,16 +78,14 @@ const MainHeaderLogoText = styled.h1`
     color: white;
     font-size: 25px;
     text-transform: uppercase;
-    padding: 10px 0px 0px 20px;
 `
 const UserNameInMainHeader = styled.p`
     color: white;
-    padding: 20px 20px 0px 0px;
     text-transform: uppercase;
     font-size: 14px;
 `
 const MainBody = styled.div`
-    padding-top: 60px;
+    padding-top: 20px;
 `
 const Wrapper = styled.div`  
 `    
