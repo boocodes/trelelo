@@ -7,11 +7,10 @@ interface Props{
 
 }
 
-function PersonalPage(props:Props) {
+function RegistrationPage(props:Props) {
     return(
         <ExternalWrapper>
-
-            
+            registration
         </ExternalWrapper>
     )
 }
@@ -23,4 +22,4 @@ const ExternalWrapper = styled.div`
 `
 
 
-export default PersonalPage;
+export default RegistrationPage;

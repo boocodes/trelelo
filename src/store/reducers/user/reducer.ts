@@ -2,8 +2,8 @@ import { createSlice , PayloadAction} from "@reduxjs/toolkit";
 import {UserType} from '../../../types'
 
 const initialState:UserType = {
-    userName: '',
-    authFlag: false,
+    userName: 'nick',
+    authFlag: true,
 }
 
 
