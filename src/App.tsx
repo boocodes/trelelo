@@ -1,28 +1,55 @@
-import TrelelloApp from './components/TrelelloWorkingWindow/TrelelloApp/TrelelloApp';
-import AskingNameModalWindow from './components/AskingNameModalWindow/AskingNameModalWindow';
+
 import './Styles/App.css'
-import { useAppSelector } from './hooks';
 import styled from 'styled-components';
-import { userNameSelector, userAuthFlagSelector} from './store';
 import {
   Navigate,
   Route,
   Routes,
 } from 'react-router-dom';
 
+import {
+  useAppSelector,
+  userNameSelector,
+  userAuthFlagSelector,
+  LoginPage,
+  PersonalPage,
+  RegistrationPage,
+  AppPage,
+  NotFoundPage
+} from './';
+
 
 function App() {
   const userName = useAppSelector(userNameSelector)
   const userAuthFlag = useAppSelector(userAuthFlagSelector);
  return(
-   <Wrapper>
-    {userName.length <= 0 ? <AskingNameModalWindow/> : null}
-    <TrelelloApp/>
-   
-   </Wrapper>
+    <Routes>
+      <Route
+        path='/login'
+        element={userAuthFlag === true ? <Navigate to={"/app"}/> : <LoginPage/>}
+      />
+      <Route
+        path='/registration'
+        element={userAuthFlag === true ? <Navigate to={"/app"}/> : <RegistrationPage/>}
+      />
+      <Route
+        path='/app'
+        element={userAuthFlag === true ? <AppPage/> : <Navigate to={"/"}/>}
+      />
+      <Route 
+        path='/'
+        element={userAuthFlag === true ? <AppPage/> : <Navigate to={"/"}/>}
+      />
+      <Route
+        path='*'
+        element={<NotFoundPage/>}
+      />
+      <Route
+        path='/personal'
+        element={userAuthFlag === true ? <PersonalPage/> : <Navigate to={"/"}/>}
+      />
+    </Routes>
  )
 }
 
-const Wrapper = styled.div`
-`
 export default App;
