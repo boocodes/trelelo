@@ -20,6 +20,9 @@ interface ChangeColumnType{
     columnId: string;
     name: string;
 }
+interface ChangeActiveColumnIdType{
+    activeColumnId: string;
+}
 
 export const columnReducer = createSlice({
     name: 'column',
@@ -34,9 +37,11 @@ export const columnReducer = createSlice({
         changeColumn: (state, {payload}: PayloadAction<ChangeColumnType>) =>{
            state.columns = state.columns.map((column:ColumnType) => column.id === payload.columnId ? {...column, ...payload} : column);
         },
-        
+        changeActiveColumnId: (state, {payload}:PayloadAction<ChangeActiveColumnIdType>) =>{
+            return {...state, ...payload};
+        },
     }
 })
 
-export const {addNewColumn, changeColumn, deleteCurrentColumn}  = columnReducer.actions;
+export const {addNewColumn, changeColumn, deleteCurrentColumn, changeActiveColumnId}  = columnReducer.actions;
 export default columnReducer.reducer;
