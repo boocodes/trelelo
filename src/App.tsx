@@ -17,6 +17,7 @@ import {
   AppPage,
   NotFoundPage,
   ColumnPage,
+  WelcomePage,
 } from './';
 
 
@@ -39,7 +40,7 @@ function App() {
       />
       <Route 
         path='/'
-        element={userAuthFlag === true ? <Navigate to={"/app"} /> : <Navigate to={"/"}/>}
+        element={userAuthFlag === true ? <AppPage/> : <Navigate to={"/welcome"} />}
       />
       <Route
         path='*'
@@ -52,6 +53,10 @@ function App() {
       <Route 
         path="/app/column"
         element={userAuthFlag === true ? <ColumnPage/> : <Navigate to={"/"}/>}
+      />
+      <Route
+        path='welcome'
+        element={userAuthFlag === true ? <AppPage/> : <WelcomePage/>}
       />
     </Routes>
  )

@@ -3,7 +3,7 @@ import {UserType} from '../../../types'
 
 const initialState:UserType = {
     userName: 'nick',
-    authFlag: true,
+    authFlag: false,
     email: "java.2015@bk.ru",
 }
 
