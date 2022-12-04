@@ -28,5 +28,4 @@ export * from './hooks';
 export * from './store';
 export * from './types';
 export * from './ui';
-export * from './Images';
 export * from './pages';

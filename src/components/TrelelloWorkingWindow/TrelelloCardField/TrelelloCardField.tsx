@@ -8,7 +8,6 @@ import {
     addNewColumn,
     columnsSelector,
     Column,
-    Xicon,
     ColumnType
 }   from '../../../';
 
@@ -70,7 +69,7 @@ const TrelelloCardField = (props:Props) =>{
                         </Field>
                         <AddAnotherColumnWrapperAddButton onClick={handleSubmit}>Add list</AddAnotherColumnWrapperAddButton>
                         <AddAnotherColumnWrapperCancelButton onClick={()=>{setAddAnotherColumnFlag(!addAnotherColumnFlag)}}>
-                            <AddAnotherColumnWrapperCancelButtonImg src={Xicon}/>
+                            <AddAnotherColumnWrapperCancelButtonImg src='./images/Xicon.png'/>
                         </AddAnotherColumnWrapperCancelButton>
                         </form>
                     )}

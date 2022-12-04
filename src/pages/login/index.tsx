@@ -1,5 +1,7 @@
 import styled from "styled-components";
-
+import {
+    LoginForm
+}   from '../../';
 
 
 interface Props{
@@ -9,14 +11,15 @@ interface Props{
 function LoginPage(props:Props){
     return(
         <ExternalWrapper>
-            login
-        
+            <LoginForm/>
         </ExternalWrapper>
     )
 }
 
 const ExternalWrapper = styled.div`
-
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 `
 
 

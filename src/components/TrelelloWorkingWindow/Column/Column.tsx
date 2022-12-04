@@ -10,7 +10,6 @@ import {
     useAppDispatch,
     useAppSelector,
     CardType,
-    Xicon,
     CustomLink,
     changeActiveColumnId,
 }   from '../../../';
@@ -73,7 +72,7 @@ const Column = (props: columnProps) =>{
                         <AdditionalMenuUnderLine>
                             <AdditionalMenuUnderLineAddButton > Add card</AdditionalMenuUnderLineAddButton>
                             <AdditionalMenuUnderLineDeleteButton onClick={()=>{setShowAddingMenuFlag(true)}}>
-                                <AdditionalMenuUnderLineDeleteButtonImg src={Xicon}></AdditionalMenuUnderLineDeleteButtonImg>
+                                <AdditionalMenuUnderLineDeleteButtonImg src='./images/Xicon.png'></AdditionalMenuUnderLineDeleteButtonImg>
                             </AdditionalMenuUnderLineDeleteButton>
                         </AdditionalMenuUnderLine>
                     </AdditionalMenu>
@@ -107,7 +106,7 @@ const Column = (props: columnProps) =>{
                 {editColumnTitleFlag === false ? 
                 <>
                 <ColumnTitle onClick={()=>dispatch(changeActiveColumnId({activeColumnId:props.id}))}><CustomLink link="./column" text={props.title} bgColor="none" textColor="black"/></ColumnTitle>
-                <DeleteRowButton onClick={()=>{deleteColumn(props.title)}}><DeleteRowButtonImage src={Xicon}></DeleteRowButtonImage></DeleteRowButton>
+                <DeleteRowButton onClick={()=>{deleteColumn(props.title)}}><DeleteRowButtonImage src='./images/Xicon.png'></DeleteRowButtonImage></DeleteRowButton>
                 </>
                 : 
                 <Form
