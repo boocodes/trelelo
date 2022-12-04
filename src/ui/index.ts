@@ -5,3 +5,4 @@ export {default as Header} from './header';
 export {default as UserInfoBlock} from './userInfoBlock';
 export {default as TextInput} from './textInput';
 export {default as PasswordInput} from './passwordInput';
+export {default as SubmitButton } from './submitButton';

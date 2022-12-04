@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React from "react";
-
+import {    
+    RegistrationForm,
+} from '../../';
 
 
 interface Props{
@@ -10,7 +12,7 @@ interface Props{
 function RegistrationPage(props:Props) {
     return(
         <ExternalWrapper>
-            registration
+            <RegistrationForm/>
         </ExternalWrapper>
     )
 }

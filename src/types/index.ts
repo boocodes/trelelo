@@ -20,4 +20,5 @@ export interface UserType{
     userName:string;
     authFlag: boolean;
     email: string;
+    password: string;
 }

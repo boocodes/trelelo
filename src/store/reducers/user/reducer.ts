@@ -2,9 +2,10 @@ import { createSlice , PayloadAction} from "@reduxjs/toolkit";
 import {UserType} from '../../../types'
 
 const initialState:UserType = {
-    userName: 'nick',
+    userName: "",
     authFlag: false,
-    email: "java.2015@bk.ru",
+    email: "",
+    password: ""
 }
 
 
@@ -20,6 +21,12 @@ interface ChangeUserEmailInterface{
     email: string;
 }
 
+interface ChangeUserData{
+    username: string;
+    email: string;
+    password: string;
+}
+
 export const userReducer = createSlice({
     name: 'user',
     initialState,
@@ -33,10 +40,13 @@ export const userReducer = createSlice({
         changeUserEmail: (state, {payload}:PayloadAction<ChangeUserEmailInterface>) =>{
             return {...state, ...payload};
         },
+        changeUserData: (state, {payload}:PayloadAction<ChangeUserData>) =>{
+            return {...state, ...payload};
+        },
     }
 })
 
 
 
-export const {addUserName, authUser, changeUserEmail}  = userReducer.actions;
+export const {addUserName, authUser, changeUserEmail, changeUserData}  = userReducer.actions;
 export default userReducer.reducer;
