@@ -63,7 +63,7 @@ function LoginForm(props: Props){
                         />
                       )}
                 />
-                <ChildSubmitButton text="Login" bgColor="#5736ff" textColor="white" />
+                <SubmitButton text="Login" bgColor="#5736ff" textColor="white" />
             </Form>
            
         </>
@@ -74,10 +74,6 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
-`
-
-const ChildSubmitButton = styled(SubmitButton)`
-    margin-left: 20px;
 `
 
 

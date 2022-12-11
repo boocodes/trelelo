@@ -39,7 +39,6 @@ const Root = styled.input<RootProps>`
         opacity: 0.5;
         transition: 0.5s;
     }
-    font-family: Roboto;
     background: ${props=>props.bgColor};
     outline: none;
     border: ${props=> props.error === 'error' ? '1px solid red' : props.error === 'ok' ? '1px solid #17BC77' : '1px solid white'};

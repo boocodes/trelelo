@@ -28,6 +28,7 @@ export const cardReducer = createSlice({
                id: Math.random().toString(),
                name: payload.name,
                columnId: payload.columnId,
+               description: "basic description",
            }
            state.cards.push(newCard);
         }, 

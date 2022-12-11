@@ -22,7 +22,7 @@ interface ChangeUserEmailInterface{
 }
 
 interface ChangeUserData{
-    username: string;
+    userName: string;
     email: string;
     password: string;
 }

@@ -3,6 +3,8 @@ import {
     useAppSelector,
     userEmailSelector,
     userNameSelector,
+    authUser,
+    useAppDispatch,
 }   from '../../';
 
 
@@ -12,6 +14,7 @@ interface Props{
 
 
 function UserInfoBlock(props:Props){
+    const dispatch = useAppDispatch()
     const userName = useAppSelector(userNameSelector);
     const userEmail = useAppSelector(userEmailSelector);
     return(
@@ -28,6 +31,9 @@ function UserInfoBlock(props:Props){
                 <UserDataCommonText>password:</UserDataCommonText>
                 <UserData>0001w</UserData>
             </UserDataElementWrapper>
+            <LogoutButton onClick={()=>dispatch(authUser({authFlag: false}))}>
+                Logout
+            </LogoutButton>
         </UserDataExternalWrapper>
     )
 }
@@ -55,6 +61,11 @@ const UserDataCommonText = styled.div`
 const UserData = styled.div`
     font-size: 21px;
     opacity: 0.7;
+`
+
+
+const LogoutButton = styled.button`
+    
 `
 
 

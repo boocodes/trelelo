@@ -25,7 +25,7 @@ function RegistrationForm(props: Props){
             return;
         }
         else{
-            dispatch(changeUserData({username: values.username, password: values.password, email: values.email}))
+            dispatch(changeUserData({userName: values.username, password: values.password, email: values.email}))
             window.location.href = "/login";
         }
         
